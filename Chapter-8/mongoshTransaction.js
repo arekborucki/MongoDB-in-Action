@@ -1,4 +1,15 @@
-// mongoshTransaction.js
+/**
+ * Multi-document transaction using mongosh
+ *
+ * This script manually executes a multi-document ACID transaction in MongoDB using the `mongosh` shell.
+ * It performs read and write operations across multiple collections (`accounts`, `customers`, and `transactions`)
+ * in the `sample_analytics` database. The transaction is retried up to 5 times if it fails due to
+ * transient errors (e.g. TransientTransactionError, UnknownTransactionCommitResult).
+ *
+ * Usage:
+ *   Paste this code into mongosh or run it part-by-part to observe each step.
+ */
+
 function executeTransaction(session) {
   const dbSampleAnalytics = session.getDatabase('sample_analytics')
 
