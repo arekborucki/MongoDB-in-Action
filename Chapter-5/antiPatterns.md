@@ -54,18 +54,7 @@ Maintaining indexes that are rarely used or redundant consumes memory and can sl
 
 ---
 
-## 5. **Storing Data That Changes Frequently**
-Storing data that changes very frequently within a single document can lead to excessive document updates, which might affect performance.
-
-### Problem:
-- Updating large documents too frequently can be expensive in terms of write operations and increase the chance of conflicts or errors.
-  
-### Solution:
-- **Break down frequently changing data** into smaller, more granular documents to minimize the frequency of large document updates.
-  
----
-
-## 6. **Separating Data Accessed Together**
+## 5. **Separating Data Accessed Together**
 Storing related data in separate documents or collections can lead to frequent joins and complex queries, which can be inefficient.
 
 ### Problem:
@@ -76,7 +65,7 @@ Storing related data in separate documents or collections can lead to frequent j
 
 ---
 
-## 7. **Massive Number of Collections**
+## 6. **Massive Number of Collections**
 Having too many collections in MongoDB, especially when many of them are rarely used, can lead to performance degradation and increased maintenance overhead.
 
 ### Problem:
@@ -87,7 +76,7 @@ Having too many collections in MongoDB, especially when many of them are rarely 
 
 ---
 
-## 8. **Large Numbers of Small Documents**
+## 7. **Large Numbers of Small Documents**
 Having a large number of small documents (such as sensor data or logs) in a collection can increase the overhead in query processing, as MongoDB has to handle many small documents individually.
 
 ### Problem:
@@ -98,7 +87,7 @@ Having a large number of small documents (such as sensor data or logs) in a coll
 
 ---
 
-## 9. **Overuse of Aggregation Pipelines**
+## 8. **Overuse of Aggregation Pipelines**
 Relying heavily on aggregation pipelines for complex queries can lead to increased computational cost and slower performance, especially if the pipeline stages are not optimized.
 
 ### Problem:
@@ -109,7 +98,7 @@ Relying heavily on aggregation pipelines for complex queries can lead to increas
 
 ---
 
-## 10. **Not Using Schema Validation**
+## 9. **Not Using Schema Validation**
 MongoDB's flexible schema is powerful, but not using schema validation can lead to inconsistent or incorrect data being stored in your collections.
 
 ### Problem:
@@ -120,7 +109,7 @@ MongoDB's flexible schema is powerful, but not using schema validation can lead 
 
 ---
 
-## 11. **Under-Optimizing Indexes**
+## 10. **Under-Optimizing Indexes**
 Not creating indexes on frequently queried fields or failing to optimize index usage can result in slow query performance.
 
 ### Problem:
