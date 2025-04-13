@@ -21,7 +21,6 @@ It explores how to **visualize MongoDB data** using **Atlas Charts**, and how to
 | File name                 | Description |
 |---------------------------|-------------|
 | `natural_language_chart.json` | Example of an aggregation pipeline auto-generated from a natural language query in Atlas Charts. |
-| `billing_dashboard.md`    | Instructions and tips for setting up a custom billing dashboard in Atlas Charts, including available chart types and metrics. |
 | `atlas_trigger_function.js` | Atlas Trigger Function that logs insert, update, and delete operations into a dedicated logging collection. |
 | `scheduled_trigger.cron`  | CRON expression example used to run a Scheduled Trigger every minute. |
 | `fetch_user_data_function.js` | Example Atlas Function that fetches user data from an external API using `async/await`. |
