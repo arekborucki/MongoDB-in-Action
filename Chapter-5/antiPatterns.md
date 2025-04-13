@@ -76,18 +76,7 @@ Having too many collections in MongoDB, especially when many of them are rarely 
 
 ---
 
-## 7. **Large Numbers of Small Documents**
-Having a large number of small documents (such as sensor data or logs) in a collection can increase the overhead in query processing, as MongoDB has to handle many small documents individually.
-
-### Problem:
-- A high volume of small documents can lead to increased I/O and management overhead when querying the collection.
-  
-### Solution:
-- **Use the bucket pattern** to group smaller data entries (e.g., time-series data) into larger documents, reducing the total number of documents in the collection and improving performance.
-
----
-
-## 8. **Overuse of Aggregation Pipelines**
+## 7. **Overuse of Aggregation Pipelines**
 Relying heavily on aggregation pipelines for complex queries can lead to increased computational cost and slower performance, especially if the pipeline stages are not optimized.
 
 ### Problem:
@@ -98,7 +87,7 @@ Relying heavily on aggregation pipelines for complex queries can lead to increas
 
 ---
 
-## 9. **Not Using Schema Validation**
+## 8. **Not Using Schema Validation**
 MongoDB's flexible schema is powerful, but not using schema validation can lead to inconsistent or incorrect data being stored in your collections.
 
 ### Problem:
@@ -109,7 +98,7 @@ MongoDB's flexible schema is powerful, but not using schema validation can lead 
 
 ---
 
-## 10. **Under-Optimizing Indexes**
+## 9. **Under-Optimizing Indexes**
 Not creating indexes on frequently queried fields or failing to optimize index usage can result in slow query performance.
 
 ### Problem:
