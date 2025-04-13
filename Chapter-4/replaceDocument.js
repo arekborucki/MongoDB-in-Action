@@ -1,3 +1,4 @@
+// Replace an entire document with a new structure
 db.routes.replaceOne(
   { "airline.id": 412, "src_airport": "CDG", "dst_airport": "JFK" },
   {
@@ -6,5 +7,5 @@ db.routes.replaceOne(
     aircraft: "Boeing 777",
     status: "Scheduled"
   },
-  { upsert: true }
+  { upsert: true } // Creates the document if it doesn't exist
 )
