@@ -1,11 +1,16 @@
-// A minimal stream processor that reads from a sample stream source
+// Basic Stream Processor – reads from sample solar stream and prints to shell
 
-let source = {
+// Define the $source stage using the built-in sample solar data
+let s = {
   $source: {
     connectionName: "sample_stream_solar"
   }
 };
 
-let processor = [source];
+// Build processor pipeline
+let processor = [s];
 
-sp.process(processor)
+// Execute the processor – will continuously stream to the console
+sp.process(processor);
+
+// Use CTRL+C to stop the stream in mongosh shell
