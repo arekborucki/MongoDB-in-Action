@@ -4,28 +4,24 @@
 
 use sample_mflix;
 
-// Example query vector (1536-dimensional). This is a shortened dummy vector for demonstration.
-const queryVector = Array(1536).fill(0).map((_, i) => i % 2 === 0 ? 0.001 : 0.002);
-
-const results = db.embedded_movies.aggregate([
+db.embedded_movies.aggregate([
   {
-    $vectorSearch: {
+    $search: {
       index: "vectorSearchIndex",
-      path: "plot_embedding",
-      queryVector: queryVector,
-      numCandidates: 100,
-      limit: 5
+      knnBeta: {
+        vector: [0.11, 0.23, 0.91, 0.17, ...], // Example vector
+        path: "plot_embedding",
+        k: 5
+      }
     }
+  },
+  {
+    $limit: 5
   },
   {
     $project: {
       title: 1,
-      plot: 1,
-      _id: 0,
-      score: { $meta: "vectorSearchScore" }
+      score: { $meta: "searchScore" }
     }
   }
 ])
-
-print("\n🔍 Top 5 Vector Search Results:\n");
-results.forEach(printjson);
