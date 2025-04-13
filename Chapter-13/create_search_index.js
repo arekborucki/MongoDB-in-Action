@@ -14,4 +14,4 @@ db.inspections.createSearchIndex(
 );
 
 // Verify the index was created
-printjson(db.inspections.getSearchIndexes());
+printjson(db.inspections.getSearchIndexes())
