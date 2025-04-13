@@ -22,15 +22,15 @@ It introduces **MongoDB Atlas Stream Processing**, a powerful tool for building 
 
 ## 📁 Files Included
 
-| File name                    | Description |
-|-----------------------------|-------------|
-| `basicStreamProcessor.js`   | A minimal stream processor that connects to a sample source and prints streaming data in real time. |
-| `validatedProcessor.js`     | Processor with `$validate` stage that enforces a document schema before merging results to MongoDB. |
-| `processorWithDLQ.js`       | A stream processor that routes invalid data to a Dead Letter Queue using `validationAction: "dlq"`. |
-| `lookupEnrichment.js`       | Uses `$lookup` to enrich incoming Kafka messages with data from a MongoDB collection before validation. |
-| `iotHoppingWindow.js`       | Applies `$hoppingWindow` to sensor data to calculate rolling average temperature. |
-| `documentArrayDebug.js`     | Demonstrates debugging a stream pipeline using a static array of predefined JSON documents. |
-| `persistentProcessor.js`    | Full example of a persistent processor that reads sample data, applies windowing and grouping, and stores results in MongoDB. |
+| File name                  | Description |
+|---------------------------|-------------|
+| `basicStreamProcessor.js` | A minimal stream processor that connects to a sample source and prints streaming data in real time. |
+| `validatedProcessor.js`   | Processor with `$validate` stage that enforces a document schema before merging results to MongoDB. |
+| `dlqProcessor.js`         | A stream processor that routes invalid data to a Dead Letter Queue using `validationAction: "dlq"`. |
+| `lookupProcessor.js`      | Uses `$lookup` to enrich incoming Kafka messages with data from a MongoDB collection before validation. |
+| `iotWindowProcessor.js`   | Applies `$hoppingWindow` to sensor data to calculate rolling average temperature. |
+| `documentArrayProcessor.js` | Demonstrates debugging a stream pipeline using a static array of predefined JSON documents. |
+| `mongodbInAction.js`      | Full example of a persistent processor that reads sample data, applies windowing and grouping, and stores results in MongoDB. |
 
 ---
 
