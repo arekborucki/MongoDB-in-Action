@@ -18,31 +18,31 @@ It explores MongoDB **Atlas**, MongoDB’s fully-managed Database-as-a-Service (
 
 ## 📁 Files Included
 
-| File name                    | Description |
-|------------------------------|-------------|
-| `create_m0_flex_cluster.js`  | Script to create and configure an M0 or Flex Atlas cluster using the Atlas CLI. |
-| `create_m10_cluster.js`      | Script for deploying a dedicated M10+ Atlas cluster with custom settings. |
-| `enable_autoscaling.json`    | JSON payload used to enable auto-scaling of tier and storage for a cluster. |
-| `global_cluster_config.json` | Example configuration for deploying a multi-region global cluster. |
-| `analytics_read_query.js`    | Sample connection using `readPreferenceTags` to route queries to analytics nodes. |
-| `multi_region_write.js`      | Example write operation using a custom write concern (e.g., `threeRegions`). |
+| File name                     | Description |
+|-------------------------------|-------------|
+| `create_m0_flex_cluster.sh`   | Atlas CLI script to create an M0 (Free Tier) or Flex cluster. |
+| `create_m10_cluster.sh`       | Atlas CLI script to create a dedicated M10 cluster with auto-scaling and backups. |
+| `enable_autoscaling.sh`       | Shell script that creates a JSON config and enables auto-scaling via the Atlas CLI. |
+| `global_cluster_config.sh`    | Shell script that writes a multi-region global cluster spec and deploys it. |
+| `analytics_read_query.js`     | Sample Node.js script using `readPreferenceTags` to route reads to analytics nodes. |
+| `multi_region_write.js`       | Node.js example demonstrating a write operation with a custom multi-region write concern. |
 
 ---
 
 ## ✅ Requirements
 
 - **MongoDB Atlas Account**
-- Atlas CLI (`mongocli`) or access to Atlas API
-- Atlas project and organization set up
-- Node.js for sample scripts (`npm install mongodb`)
-- Basic understanding of MongoDB replica sets and sharded clusters
+- Atlas CLI (`atlas`) installed and authenticated
+- Atlas project ID (`<PROJECT_ID>`) ready
+- Node.js environment for JavaScript examples (`npm install mongodb`)
+- Basic knowledge of replica sets, sharding, and MongoDB deployment options
 
 ---
 
 ## ⚠️ Notes
 
-- **M0 and Flex** clusters are ideal for testing and learning, but come with strict limitations.
-- **M10+ dedicated clusters** unlock full access to Atlas features including backups, VPC peering, and sharding.
-- Atlas allows both **vertical and storage auto-scaling**, with downtime-free transitions.
-- **Global clusters** enhance performance and compliance via geographic data partitioning.
-- **Replica set tags** let you route reads by node type, region, or cloud provider.
+- **M0 and Flex** clusters are limited in features and performance — ideal for testing only.
+- **M10+ dedicated clusters** support backups, monitoring, sharding, and VPC peering.
+- **Auto-scaling** can be enabled for both compute tier and disk storage, helping manage costs.
+- **Global clusters** support region-specific data residency and low-latency access.
+- Use **replica set tags** and **custom write concerns** to fine-tune query routing and data consistency across regions.
