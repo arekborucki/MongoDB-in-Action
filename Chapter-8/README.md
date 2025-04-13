@@ -42,3 +42,10 @@ It demonstrates how MongoDB supports **multi-document ACID transactions** and ho
   - Ruby + `mongo` gem (`gem install mongo`)
 
 ---
+
+## ⚠️ Notes
+
+- Use **callback API** for automated error handling and retries.
+- Avoid long-running transactions or large write volumes inside a transaction.
+- For performance, keep related data together in documents to reduce need for transactions.
+- Multi-shard transactions are possible but come with overhead.
