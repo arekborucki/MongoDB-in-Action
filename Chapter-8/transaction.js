@@ -1,4 +1,17 @@
-// transaction.js
+/**
+ * Multi-document transaction using MongoDB Node.js Driver with Callback API
+ *
+ * This script demonstrates how to perform a transactional update on multiple collections using
+ * the MongoDB Node.js driver. It uses `session.withTransaction()` for automatic handling of
+ * commit/abort and retries. The transaction updates the account and related customers, then inserts
+ * a new transaction record. All operations happen inside a single ACID-compliant transaction.
+ *
+ * Usage:
+ *   node transaction.js <account_id>
+ * Example:
+ *   node transaction.js 714727
+ */
+
 const { MongoClient } = require('mongodb')
 const uri = "your_mongodb_connection_string"
 
@@ -39,8 +52,8 @@ async function run(accountId) {
       await customers.updateMany(
         { accounts: { $in: [parseInt(accountId)] } },
         {
-          $inc: { transaction_count: 1 },
-          $set: { last_transaction_date: currentDate }
+          $set: { last_transaction_date: currentDate },
+          $inc: { transaction_count: 1 }
         },
         { session }
       )
