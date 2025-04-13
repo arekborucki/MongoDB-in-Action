@@ -1,6 +1,8 @@
+// Perform multiple insert operations across different collections (MongoDB 8.0+)
 db.adminCommand({
   bulkWrite: 1,
   ops: [
+    // Insert into sample_training.routes
     {
       insert: 0,
       document: {
@@ -12,6 +14,7 @@ db.adminCommand({
         airplane: '737'
       }
     },
+    // Insert into sample_analytics.customers
     {
       insert: 1,
       document: {
@@ -25,9 +28,9 @@ db.adminCommand({
           },
           '699456451cc24f028d2aa99d7534c219': {
             tier: 'Bronze',
-            benefits: ['24 hour dedicated line'],
+            id: '699456451cc24f028d2aa99d7534c219',
             active: true,
-            id: '699456451cc24f028d2aa99d7534c219'
+            benefits: ['24 hour dedicated line']
           }
         }
       }
