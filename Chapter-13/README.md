@@ -20,8 +20,6 @@ It focuses on how to use the **Atlas CLI** to set up and manage **local Atlas cl
 
 ## 📁 Files Included
 
-## 📁 Files Included
-
 | File name                   | Description |
 |-----------------------------|-------------|
 | `local_deployment_setup.sh` | Shell script to automate local Atlas deployment using `atlas deployments setup`, including pre-checks and connection hints. |
