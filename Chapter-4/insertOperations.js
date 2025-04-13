@@ -1,5 +1,7 @@
-// Insert one document
-use('sample_training');
+// Switch to the sample_training database
+use sample_training
+
+// Insert a single document into the routes collection
 db.routes.insertOne({
   airline: { id: 410, name: 'Lufthansa', alias: 'LH', iata: 'DLH' },
   src_airport: 'MUC',
@@ -9,7 +11,7 @@ db.routes.insertOne({
   airplane: 'A380'
 })
 
-// Insert many documents
+// Insert multiple documents into the routes collection
 db.routes.insertMany([
   {
     airline: { id: 413, name: 'American Airlines', alias: 'AA', iata: 'AAL' },
