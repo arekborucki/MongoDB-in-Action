@@ -21,7 +21,6 @@ It explores **Atlas Search**, a powerful full-text search engine built into Mong
 
 | File name                | Description |
 |--------------------------|-------------|
-| `index-definition.json`  | Static mapping config used to create an Atlas Search index on `sample_training.inspections`. |
 | `create_search_index.sh` | Shell script that creates a new Atlas Search index using the `index-definition.json` file. |
 | `search_text_query.js`   | Node.js example using `$search` with compound operator and score relevance. |
 | `search_fuzzy_query.js`  | Node.js example performing fuzzy search using `$search` on business names. |
