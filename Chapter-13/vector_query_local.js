@@ -1,5 +1,3 @@
-// vector_query_local.js
-//
 // Performs a semantic similarity query using the knnBeta operator.
 // Requires a vector index on the plot_embedding field.
 
