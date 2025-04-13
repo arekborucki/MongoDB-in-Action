@@ -1,40 +1,60 @@
 # Chapter 5 – Designing MongoDB Schema
 
-This directory contains code samples and schema examples for **Chapter 5** of *MongoDB 8.0 in Action*.  
-It focuses on best practices for MongoDB schema design, validation techniques, and the application of real-world design patterns.
-
-## 📚 What You’ll Learn
-
-- How MongoDB’s flexible schema supports dynamic application development
-- Key principles of effective schema modeling
-- Embedding vs referencing data
-- Working with one-to-one, one-to-many, and many-to-many relationships
-- Implementing schema design patterns (e.g. Subset, Computed, Bucket, Versioning)
-- Applying JSON Schema validation rules to collections
-- Avoiding schema anti-patterns (e.g. massive arrays, bloated documents)
-
-## 📁 Files Included
-
-| File                    | Description |
-|-------------------------|-------------|
-| `sampleDocuments.js`    | Example documents for `routes` and `airports`, demonstrating embedding and referencing. |
-| `schemaValidation.js`   | Adds JSON Schema validation rules to the `routes` collection. |
-| `designPatterns.js`     | Code examples for schema design patterns like Subset, Computed, and Bucket. |
-| `antiPatterns.md`       | Explanation of common schema anti-patterns to avoid in production. |
-| `README.md`             | Overview of this chapter’s structure and content. |
-
-## 🛠 Prerequisites
-
-- MongoDB 8.0 or higher
-- Atlas cluster or local MongoDB instance
-- Sample datasets loaded (`sample_training`, `sample_airports`)
-
-## 🔗 Resources
-
-- 📘 [MongoDB Schema Design Docs](https://www.mongodb.com/docs/manual/core/data-model-design/)
-- 🎓 [MongoDB University – Schema Design Patterns Course](https://learn.mongodb.com/courses/schema-design-patterns)
-- 🧠 [MongoDB Blog – Building with Patterns](https://www.mongodb.com/blog/post/building-with-patterns-a-summary)
+This directory contains code samples and schema examples from **Chapter 5** of _MongoDB 8.0 in Action_.  
+It focuses on MongoDB schema design best practices, validation rules, and implementation of proven data modeling patterns for scalable, efficient applications.
 
 ---
 
-> 💡 **Tip:** Schema design should reflect your query patterns – optimize for how your app reads and writes data, not just how it's logically related.
+## 📚 What You'll Learn
+
+- How MongoDB's **flexible schema** supports rapid application development
+- Core principles of **effective schema modeling**
+- Choosing between **embedding** and **referencing** documents
+- Modeling **one-to-one**, **one-to-many**, and **many-to-many** relationships
+- Implementing common **schema design patterns**:
+  - Subset
+  - Computed
+  - Bucket
+  - Versioning
+- Enforcing schema structure using **JSON Schema validation**
+- Recognizing and avoiding **anti-patterns** such as:
+  - Massive, unbounded arrays
+  - Overly nested or bloated documents
+  - Schema drift and uncontrolled document growth
+
+---
+
+## 📁 Files Included
+
+| File name               | Description |
+|-------------------------|-------------|
+| `sampleDocuments.js`    | Example MongoDB documents for collections like `routes` and `airports`, illustrating embedded vs referenced relationships. |
+| `schemaValidation.js`   | Demonstrates how to apply JSON Schema validation rules to a collection. |
+| `designPatterns.js`     | Code examples that showcase MongoDB schema patterns including Subset, Computed, and Bucket designs. |
+| `antiPatterns.md`       | A markdown guide explaining common schema anti-patterns and how to avoid them. |
+| `README.md`             | Overview of the chapter’s content and usage of included files. |
+
+---
+
+## 🛠 Prerequisites
+
+- **MongoDB 8.0+**
+- A running **Atlas cluster** or local MongoDB instance
+- Sample datasets imported: `sample_training`, `sample_airports`
+
+---
+
+## 💡 Tips
+
+- Schema design should match your **application’s query patterns**, not traditional relational logic.
+- Use **embedding** for performance and atomicity when related data is always accessed together.
+- Use **referencing** when dealing with large or frequently updated subdocuments.
+- Apply **schema validation** in production to ensure data quality and structure consistency.
+
+---
+
+## 🔗 Additional Resources
+
+- 📘 [MongoDB Schema Design Documentation](https://www.mongodb.com/docs/manual/core/data-model-design/)
+- 🎓 [MongoDB University – Schema Design Patterns Course](https://learn.mongodb.com/courses/schema-design-patterns)
+- 🧠 [MongoDB Blog – Building with Patterns](https://www.mongodb.com/blog/post/building-with-patterns-a-summary)
