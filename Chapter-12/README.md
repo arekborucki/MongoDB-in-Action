@@ -25,13 +25,13 @@ It explores **Atlas Vector Search**, the use of **embeddings**, and advanced sem
 
 ## 📁 Files Included
 
-| File name                  | Description |
-|----------------------------|-------------|
-| `create_vector_index.sh`   | Shell script that creates the Atlas Vector Search index using the Atlas CLI and the `vector-definition.json` file. |
-| `vector_query.js`          | JavaScript (Node.js) script using the MongoDB driver to perform a vector search query. |
+| File name                     | Description |
+|-------------------------------|-------------|
+| `create_vector_index.sh`      | Shell script that creates the Atlas Vector Search index using the Atlas CLI and the `vector-definition.json` inline definition. |
+| `vector_query.js`             | JavaScript (Node.js) script using the MongoDB driver to perform a vector search query. |
 | `vector_query_with_filter.py` | Python script using `pymongo` to execute a vector search query with pre-filters applied. |
 | `vector_query_with_filter.rb` | Ruby script using the `mongo` gem to perform a vector search query with category and price filters. |
-| `atlas_trigger_function.js` | Atlas Trigger function (written in JavaScript) that automatically creates embeddings for new documents using the OpenAI Embeddings API. |
+| `atlas_trigger_function.js`   | Atlas Trigger function (written in JavaScript) that automatically creates embeddings for new documents using the OpenAI Embeddings API. |
 
 ---
 
@@ -51,7 +51,8 @@ It explores **Atlas Vector Search**, the use of **embeddings**, and advanced sem
 
 ## ⚠️ Notes
 
-- Atlas does not provide built-in embedding generation — use external systems like OpenAI or Hugging Face.
+- Atlas does not provide built-in embedding generation — use external systems like **OpenAI**, **Hugging Face**, or **Voyage AI**.
+- **Voyage AI** is a high-performance embedding model provider recently [acquired by MongoDB](https://investors.mongodb.com/news-releases/news-release-details/mongodb-announces-acquisition-voyage-ai-enable-organizations). You can use Voyage models to generate dense vector embeddings optimized for search, RAG, and semantic classification.
 - The query vector **must** be created with the same model used to generate your data embeddings.
 - ANN (Approximate Nearest Neighbor) is faster; use ENN (Exact Nearest Neighbor) only when precision is critical.
 - Use **pre-filters** in queries to limit search scope and improve performance.
