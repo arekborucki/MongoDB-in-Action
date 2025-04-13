@@ -19,7 +19,7 @@ This folder contains example scripts and data referenced in **Chapter 1** of the
 
 ### `insert-example.js`
 
-Demonstrates how to insert a complex MongoDB document using the `insertOne()` operation.
+Demonstrates how to insert a MongoDB document using the `insertOne()` operation.
 
 ### `query-example.js`
 
@@ -32,9 +32,3 @@ Updates a field in an existing document using `updateOne()`.
 ### `delete-example.js`
 
 Deletes documents matching a condition using `deleteMany()`.
-
-### `books.json`
-
-Sample data with one book document used for insert and query examples.
-
-
