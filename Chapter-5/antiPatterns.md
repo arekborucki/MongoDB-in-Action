@@ -87,18 +87,7 @@ Having too many collections in MongoDB, especially when many of them are rarely 
 
 ---
 
-## 8. **Use of DBRefs**
-While MongoDB supports DBRefs (database references) for referencing data between collections, this can introduce unnecessary complexity and inefficiencies.
-
-### Problem:
-- DBRefs require additional queries to resolve the references, which can lead to performance bottlenecks and extra network overhead.
-  
-### Solution:
-- **Avoid DBRefs** where possible and consider using manual references or embedding data directly within documents.
-
----
-
-## 9. **Large Numbers of Small Documents**
+## 8. **Large Numbers of Small Documents**
 Having a large number of small documents (such as sensor data or logs) in a collection can increase the overhead in query processing, as MongoDB has to handle many small documents individually.
 
 ### Problem:
@@ -109,7 +98,7 @@ Having a large number of small documents (such as sensor data or logs) in a coll
 
 ---
 
-## 10. **Overuse of Aggregation Pipelines**
+## 9. **Overuse of Aggregation Pipelines**
 Relying heavily on aggregation pipelines for complex queries can lead to increased computational cost and slower performance, especially if the pipeline stages are not optimized.
 
 ### Problem:
@@ -120,7 +109,7 @@ Relying heavily on aggregation pipelines for complex queries can lead to increas
 
 ---
 
-## 11. **Not Using Schema Validation**
+## 10. **Not Using Schema Validation**
 MongoDB's flexible schema is powerful, but not using schema validation can lead to inconsistent or incorrect data being stored in your collections.
 
 ### Problem:
@@ -131,7 +120,7 @@ MongoDB's flexible schema is powerful, but not using schema validation can lead 
 
 ---
 
-## 12. **Under-Optimizing Indexes**
+## 11. **Under-Optimizing Indexes**
 Not creating indexes on frequently queried fields or failing to optimize index usage can result in slow query performance.
 
 ### Problem:
