@@ -20,13 +20,16 @@ It focuses on how to use the **Atlas CLI** to set up and manage **local Atlas cl
 
 ## 📁 Files Included
 
+## 📁 Files Included
+
 | File name                   | Description |
 |-----------------------------|-------------|
 | `local_deployment_setup.sh` | Shell script to automate local Atlas deployment using `atlas deployments setup`, including pre-checks and connection hints. |
 | `create_search_index.js`    | `mongosh` script that creates a **full-text search index** using `createSearchIndex()` in a local Atlas cluster. |
-| `vector_index_creation.js`  | `mongosh` script to create a **vector search index** on the `plot_embedding` field for use with semantic queries. |
+| `create_vector_index.js`    | `mongosh` script to create a **vector search index** on the `plot_embedding` field for use with semantic queries. |
 | `full_text_query.js`        | `mongosh` aggregation pipeline performing advanced full-text search with filters and fuzzy matching. |
 | `vector_query_local.js`     | `mongosh` script demonstrating how to query locally stored vector embeddings using `$search` with `knnBeta`. |
+| `sample_vector_query.js`    | Example vector similarity query using a sample embedding vector. Useful for testing semantic search with real data. |
 
 ---
 
