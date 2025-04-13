@@ -5,7 +5,7 @@
 
 atlas clusters create demo-shared-cluster \
   --projectId <PROJECT_ID> \
-  --provider AWS \
-  --region US_EAST_1 \
+  --provider GCP \
+  --region CENTRAL_US \
   --tier M0 \
   --mdbVersion 8.0
