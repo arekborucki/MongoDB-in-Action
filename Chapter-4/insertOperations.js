@@ -1,5 +1,5 @@
-// Inserts one and many documents into sample_training.routes
-
+// Insert one document
+use('sample_training');
 db.routes.insertOne({
   airline: { id: 410, name: 'Lufthansa', alias: 'LH', iata: 'DLH' },
   src_airport: 'MUC',
@@ -9,17 +9,30 @@ db.routes.insertOne({
   airplane: 'A380'
 })
 
+// Insert many documents
 db.routes.insertMany([
   {
     airline: { id: 413, name: 'American Airlines', alias: 'AA', iata: 'AAL' },
-    src_airport: 'DFW', dst_airport: 'LAX', codeshare: '', stops: 0, airplane: '737'
+    src_airport: 'DFW',
+    dst_airport: 'LAX',
+    codeshare: '',
+    stops: 0,
+    airplane: '737'
   },
   {
     airline: { id: 411, name: 'British Airways', alias: 'BA', iata: 'BAW' },
-    src_airport: 'LHR', dst_airport: 'SFO', codeshare: 'Y', stops: 0, airplane: '747'
+    src_airport: 'LHR',
+    dst_airport: 'SFO',
+    codeshare: 'Y',
+    stops: 0,
+    airplane: '747'
   },
   {
     airline: { id: 412, name: 'Air France', alias: 'AF', iata: 'AFR' },
-    src_airport: 'CDG', dst_airport: 'JFK', codeshare: '', stops: 0, airplane: '777'
+    src_airport: 'CDG',
+    dst_airport: 'JFK',
+    codeshare: '',
+    stops: 0,
+    airplane: '777'
   }
 ])
