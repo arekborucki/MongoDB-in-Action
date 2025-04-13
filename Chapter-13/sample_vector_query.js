@@ -1,4 +1,3 @@
-// sample_vector_query.js
 // Sample vector search query executed in a local Atlas deployment
 // Requires a 'plot_embedding' field containing 1536-dimensional vectors
 // Index must already be created using `create_vector_index.js`
