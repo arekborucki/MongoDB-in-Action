@@ -14,4 +14,4 @@ db.books.insertOne({
       "description": "A comprehensive guide to mastering MongoDB 8.0, including working with the Atlas Platform and learning the latest features"
     }
   }
-});
+})
