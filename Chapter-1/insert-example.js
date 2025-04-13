@@ -8,7 +8,7 @@ db.books.insertOne({
     "MongoDB Database System",
     "Atlas Platform"
   ],
-  "publicationYear": 2024,
+  "publicationYear": 2025,
   "additionalDetails": {
     "embeddedDocument": {
       "description": "A comprehensive guide to mastering MongoDB 8.0, including working with the Atlas Platform and learning the latest features"
