@@ -34,8 +34,8 @@ It explores the security architecture of **MongoDB Atlas**, including access con
 | File name                  | Description |
 |----------------------------|-------------|
 | `sharedResponsibility.md` | Summary and table of the MongoDB Atlas Shared Responsibility Model. |
-| `auth_methods_demo.sh`     | Shell code demonstrating different authentication methods (SCRAM, x.509, AWS IAM). |
-| `create_custom_roles.js`   | Script to define custom roles with specific privileges using the Atlas CLI. |
+| `auth_methods_demo.sh`     | Script code demonstrating different authentication methods (SCRAM, x.509, AWS IAM). |
+| `create_custom_roles.sh`   | Shell script to define custom roles with specific privileges using the Atlas CLI. |
 | `hashicorp_integration.sh` | Bash script to configure MongoDB Atlas and HashiCorp Vault integration for dynamic secrets. |
 | `audit_filter.json`        | Example of a custom JSON audit filter for MongoDB Atlas database auditing. |
 ---
