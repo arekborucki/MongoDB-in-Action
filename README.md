@@ -41,13 +41,13 @@ Each folder in this repository corresponds to a chapter in the book:
 ## 🛠️ Technologies & Tools
 
 - **MongoDB 8.0+**
-- MongoDB Atlas (cloud)
-- Drivers & CLIs:
-  - Node.js (`mongodb`)
-  - Python (`pymongo`)
-  - Ruby (`mongo`)
-  - `mongosh` shell
-  - Atlas CLI & UI
+- **MongoDB Atlas** – fully managed cloud database
+- **MongoDB Compass** – GUI for querying, schema exploration, and optimization
+- **mongosh** – modern MongoDB shell
+- **Node.js** + [`mongodb`](https://www.npmjs.com/package/mongodb) driver
+- **Python** + [`pymongo`](https://pypi.org/project/pymongo/) driver
+- **Ruby** + [`mongo`](https://rubygems.org/gems/mongo) gem
+- **MongoDB Atlas CLI** & Web UI
 
 ---
 
