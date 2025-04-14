@@ -36,8 +36,8 @@ In this chapter, you'll learn how to launch your first MongoDB Atlas cluster, lo
 
 - **MongoDB Atlas Account**
 - **MongoDB CLI Tools**:
-  - [Atlas CLI](https://www.mongodb.com/docs/atlas/cli/stable/install/)
-  - `mongosh` (MongoDB Shell)
+  - [Atlas CLI](https://www.mongodb.com/docs/atlas/cli/current/)
+  - `mongosh` ([MongoDB Shell](https://www.mongodb.com/docs/mongodb-shell/))
 - Bash-compatible terminal (macOS, Linux, or Git Bash for Windows)
 
 ---
