@@ -34,15 +34,10 @@ It explores the security architecture of **MongoDB Atlas**, including access con
 | File name                  | Description |
 |----------------------------|-------------|
 | `sharedResponsibility.md` | Summary and table of the MongoDB Atlas Shared Responsibility Model. |
-| `auth_methods_demo.js`     | JavaScript code demonstrating different authentication methods (SCRAM, x.509, AWS IAM). |
+| `auth_methods_demo.sh`     | Shell code demonstrating different authentication methods (SCRAM, x.509, AWS IAM). |
 | `create_custom_roles.js`   | Script to define custom roles with specific privileges using the Atlas CLI. |
 | `hashicorp_integration.sh` | Bash script to configure MongoDB Atlas and HashiCorp Vault integration for dynamic secrets. |
 | `audit_filter.json`        | Example of a custom JSON audit filter for MongoDB Atlas database auditing. |
-| `tls_config.md`            | Explanation of TLS configuration for encryption in transit in MongoDB Atlas. |
-| `encryption_architecture.png` | Diagram of Atlas encryption architecture with BYOK (Bring Your Own Key). |
-| `csfle_example.json`       | Sample document showing the structure of Client-Side Field Level Encrypted data. |
-| `network_setup.md`         | Instructions for configuring IP access lists, VPC Peering, and Private Endpoints. |
-
 ---
 
 ## ✅ Requirements
