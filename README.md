@@ -3,7 +3,7 @@
 **MongoDB 8.0 in Action – Building on the Atlas Data Platform**
 
 This repository contains all the **code examples**, **scripts**, and **datasets** referenced in the book _MongoDB 8.0 in Action_.  
-Each chapter dives into a different area of MongoDB — from basic CRUD and indexing to advanced features like multi-document transactions, aggregation pipelines, vector search, and working with MongoDB Atlas in the cloud.
+Each chapter explores a different aspect of MongoDB — from document modeling and CRUD operations to full-text search, vector search, monitoring, and security in MongoDB Atlas.
 
 GitHub repo: [arekborucki/MongoDB-in-Action](https://github.com/arekborucki/MongoDB-in-Action)
 
@@ -13,26 +13,28 @@ GitHub repo: [arekborucki/MongoDB-in-Action](https://github.com/arekborucki/Mong
 
 Each folder in this repository corresponds to a chapter in the book:
 
-| Chapter | Title                                           | Focus Area |
-|---------|-------------------------------------------------|------------|
-| 1       | Introduction to MongoDB                         | Overview, BSON model, tools |
-| 2       | MongoDB Shell and CRUD Operations               | `mongosh`, inserts, updates |
-| 3       | Working with Documents                          | Embedded vs referenced data |
-| 4       | MongoDB Query Language                          | Filters, projections, operators |
-| 5       | Indexing Strategies                             | Single field, compound, TTL |
-| 6       | Aggregation Framework Basics                    | `$match`, `$group`, `$project` |
-| 7       | Index Use Cases and Anti-Patterns               | Performance trade-offs |
-| 8       | Executing Multi-Document ACID Transactions      | Sessions, rollback, retry logic |
-| 9       | Read Preferences and Replica Sets               | Read modes, consistency |
-| 10      | Data Modeling Best Practices                    | Embedding, referencing, patterns |
-| 11      | Schema Design for Performance                   | Optimization, workload alignment |
-| 12      | Working with Time-Series Data                   | Buckets, compression, TTL |
-| 13      | Vector Search and Similarity Queries            | Embeddings, cosine similarity |
-| 14      | MongoDB Atlas Vector Search                     | Atlas-native search capabilities |
-| 15      | Serverless Triggers and Functions               | Atlas Functions, Triggers |
-| 17      | Connecting to Archived Data                     | Atlas Data Federation |
-| 18      | SQL Integration and Data Flattening             | BI Connector, `$sql` operator |
-| 19      | Monitoring and Performance Optimization         | Metrics, query profiler |
+| Chapter | Title                                                   | Focus Area |
+|---------|---------------------------------------------------------|------------|
+| 1       | Understanding the World of MongoDB                      | Document model, Atlas overview |
+| 2       | Getting Started with MongoDB Atlas and Data             | Clusters, datasets, Atlas CLI |
+| 3       | Communicating with MongoDB                              | mongosh, Compass, drivers |
+| 4       | Executing CRUD Operations                               | Inserts, updates, drivers |
+| 5       | Designing Schema and Modeling Data                      | Embedding, referencing, validation |
+| 6       | Building Aggregation Pipelines                          | Stages, optimization, $merge |
+| 7       | Indexing for Query Performance                          | Types, strategies, explain |
+| 8       | Executing Multi-Document ACID Transactions              | Sessions, retry logic |
+| 9       | Using Replication and Sharding                          | Replica sets, oplog, sharding |
+| 10      | Delving into Database as a Service                      | Atlas tiers, auto-scaling |
+| 11      | Executing Full-Text Search using Atlas Search           | Lucene integration, $search |
+| 12      | Learning Semantic Techniques and Atlas Vector Search    | Embeddings, $vectorSearch |
+| 13      | Developing AI Applications Locally with Atlas CLI       | Local Atlas cluster, dev setup |
+| 14      | Building Retrieval-Augmented Generation AI Chatbot      | LangChain, embeddings, Atlas |
+| 15      | Building Event-Driven Applications                      | Stream Processing, Triggers |
+| 17      | Archiving Online with Atlas Online Archive              | Tiering, querying archived data |
+| 18      | Querying MongoDB Atlas Using SQL                        | SQL interface, BI tools |
+| 19      | Creating Atlas Charts, Database Triggers and Functions  | Charts, functions, automation |
+| 20      | Understanding Atlas and MongoDB Security Features       | Encryption, auditing, compliance |
+| 21      | Operational Excellence with MongoDB Atlas               | Monitoring, backup, restore, alerts |
 
 > ℹ️ Chapter 16 is not included.
 
@@ -41,13 +43,14 @@ Each folder in this repository corresponds to a chapter in the book:
 ## 🛠️ Technologies & Tools
 
 - **MongoDB 8.0+**
-- **MongoDB Atlas** – fully managed cloud database
-- **MongoDB Compass** – GUI for querying, schema exploration, and optimization
-- **mongosh** – modern MongoDB shell
-- **Node.js** + [`mongodb`](https://www.npmjs.com/package/mongodb) driver
-- **Python** + [`pymongo`](https://pypi.org/project/pymongo/) driver
-- **Ruby** + [`mongo`](https://rubygems.org/gems/mongo) gem
-- **MongoDB Atlas CLI** & Web UI
+- **MongoDB Atlas** – fully managed cloud database platform
+- **mongosh** – MongoDB shell
+- **MongoDB Atlas CLI** – CLI tool for managing Atlas
+- **MongoDB Compass** – GUI for data inspection
+- Drivers:
+  - Node.js (`mongodb`)
+  - Python (`pymongo`)
+  - Ruby (`mongo`)
 
 ---
 
@@ -56,9 +59,9 @@ Each folder in this repository corresponds to a chapter in the book:
 Each chapter folder includes:
 
 - Source code with inline comments
-- JSON files or scripts for test datasets
-- Shell commands or utility scripts
-- Chapter-specific `README.md` with explanations
+- Scripts and utility examples (Bash, CLI)
+- JSON or BSON datasets where applicable
+- Chapter-specific `README.md` with walkthrough
 
 ---
 
