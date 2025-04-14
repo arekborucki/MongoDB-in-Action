@@ -1,0 +1,34 @@
+{
+  "//": "MongoDB Atlas Audit Filter – Custom JSON format",
+  "// description": "This filter captures only selected security-relevant events and excludes system noise.",
+  "// logic": "Log only 'authenticate' and selected 'authCheck' commands while excluding specific users and system namespaces.",
+  "users.user": { "$nin": ["backup", { "$regex": "^sa_" }, "__system"] },
+  "$or": [
+    {
+      "atype": "authenticate"
+    },
+    {
+      "atype": "authCheck",
+      "param": {
+        "command": { "$in": ["find", "insert", "delete", "update"] },
+        "ns": {
+          "$nin": [
+            { "$regex": "^config\\." },
+            { "$regex": "^local\\." }
+          ]
+        }
+      }
+    }
+  ],
+  "// example": {
+    "// explanation": "Logs a user running 'find' on sample_training.routes, but ignores users like '__system' or namespaces like 'config.settings'.",
+    "// matching_event": {
+      "atype": "authCheck",
+      "users": [{ "user": "appUser", "db": "admin" }],
+      "param": {
+        "command": "find",
+        "ns": "sample_training.routes"
+      }
+    }
+  }
+}
